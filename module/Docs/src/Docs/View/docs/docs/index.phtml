@@ -1,0 +1,172 @@
+<html>
+    <head>
+        
+    </head>
+    <body>
+        <div style="width:90%;">
+            <table width="90%" align="center">
+                <tr align="center">
+                    <td colspan="2"><h1 style="text-align: center;"><a href="/docs">Social Platfform Web Services</a></h1></td>
+                </tr>
+                <tr>
+                    <td width="25%" style="vertical-align: top;">
+                        <h3><a href="/docs/authentication">Authentication Services</a></h3>
+                        <h3><a href="/docs/campaign">Campaign Services</a></h3>
+                        <h3><a href="/docs/listing">Listing Services</a></h3>
+                        <h3><a href="/docs/post">Post Services</a></h3>
+                        <h3><a href="/docs/registration">Registration Services</a></h3>
+                        <h3><a href="/docs/user">User Services</a></h3>
+                        <h3><a href="/docs/blog-post">Blog Post Services</a></h3>
+                        <h3><a href="/docs/blog">Blog Services</a></h3>
+                    </td>
+                    <td width="75%" style="vertical-align: top;">
+                        <?php if (isset($this->text)) { ?>
+                            <?php echo $this->text; ?>
+                        <?php } else { ?>
+                            <h2><?php echo $this->module; ?></h2>
+                            <h3><?php echo $this->service; ?></h3>
+                            <p style="font-size: 16px;">
+                                <?php echo $this->description; ?>
+                            </p>
+                            <br />
+                            <table border="1" width="90%" align="center">
+                                <thead align="left">
+                                    <th colspan="3">
+                                        Accepted Method:
+                                        <span style="font-weight: normal;">
+                                            <?php echo $this->method; ?>
+                                        </span>
+                                    </th>
+                                </thead>
+                                <thead align="left">
+                                    <th colspan="3">
+                                        Endpoint:
+                                        <span style="font-weight: normal;">
+                                            <?php echo $this->endpoint; ?>
+                                        </span>
+                                    </th>
+                                </thead>
+                                <thead align="left">
+                                    <th colspan="3">
+                                        Request Headers:
+                                        <span style="font-weight: normal;">
+                                            <?php echo $this->requestHeaders; ?>
+                                        </span>
+                                    </th>
+                                </thead>
+                            </table>
+                            <br />
+                            <?php if (count($this->params)) { ?>
+                                <table border="1" width="90%" align="center">
+                                    <thead>
+                                        <th colspan="3">
+                                            Parameters <span style="font-weight: normal;">(all of them in <strong>bold</strong> are required)</span>
+                                        </th>
+                                    </thead>
+                                    <thead>
+                                        <th width="35%">
+                                            Parameter
+                                        </th>
+                                        <th width="20%">
+                                            Type
+                                        </th>
+                                        <th width="45%">
+                                            Format
+                                        </th>
+                                    </thead>
+                                    <?php foreach ($this->params as $param) { ?>
+                                        <tr>
+                                            <td>
+                                                <?php if ($param['required']) { ?>
+                                                    <strong>
+                                                <?php } ?>
+                                                <?php echo $param['name']; ?>
+                                                <?php if ($param['required']) { ?>
+                                                    </strong>
+                                                <?php } ?>
+                                            </td>
+                                            <td align="center">
+                                                <?php echo $param['type']; ?>
+                                            </td>
+                                            <td align="center">
+                                                <?php echo $param['format']; ?>
+                                            </td>
+                                        </tr>
+                                    <?php } ?>
+                                </table>
+                                <br />
+                            <?php } ?>
+                            <table border="1" width="90%" align="center">
+                                <?php if ($this->exampleBody !== '') { ?>
+                                    <thead align="left">
+                                        <th colspan="3">
+                                            Example Body:
+                                            <span style="font-weight: normal;">
+                                                 <?php echo $this->exampleBody; ?>
+                                            </span>
+                                        </th>
+                                    </thead>
+                                <?php } ?>
+                                <thead align="left">
+                                    <th colspan="3">
+                                        Responses:<br />
+                                        <span style="font-weight: normal;">
+                                            <?php foreach ($this->responses as $response) { ?>
+                                                <?php echo $response; ?><br />
+                                            <?php } ?>
+                                        </span>
+                                    </th>
+                                </thead>
+                            </table>
+                            <br />
+                            <table border="1" width="90%" align="center">
+                                <thead align="left">
+                                    <th colspan="3">
+                                        Example Responses:
+                                    </th>
+                                </thead>
+                                <thead align="left">
+                                    <th width="5%">
+                                        Code
+                                    </th>
+                                    <?php
+                                        if ($this->service !== 'Login Service' && $this->service !== 'Refresh Token Service') {
+                                            $width = '95';
+                                        } else {
+                                            $width = '40';
+                                        }
+                                    ?>
+                                    <th width="<?php echo $width; ?>%">
+                                        Body
+                                    </th>
+                                    <?php if ($this->service === 'Login Service' || $this->service === 'Refresh Token Service') { ?>
+                                        <th width="55%">
+                                            Headers
+                                        </th>
+                                    <?php } ?>
+                                </thead>
+                                <?php foreach ($this->exampleResponses as $exampleResponse) { ?>
+                                    <tr align="left">
+                                        <td align="center">
+                                            <?php echo $exampleResponse['code']; ?>
+                                        </td>
+                                        <td>
+                                            <div style="max-width: 634px;">
+                                                <?php echo $exampleResponse['body']; ?>
+                                            </div>
+                                        </td>
+                                        <?php if ($this->service === 'Login Service' || $this->service === 'Refresh Token Service') { ?>
+                                            <td>
+                                                <?php echo $exampleResponse['headers']; ?>
+                                            </td>
+                                        <?php } ?>
+                                    </tr>
+                                <?php } ?>
+                            </table>
+                        <?php } ?>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </body>
+</html>
