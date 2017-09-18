@@ -1,0 +1,84 @@
+.leftbarpublic {
+	padding: 0px!important;
+}
+
+.profile-name {
+	font-size: 22px !important;
+	color: #948a8d;
+	margin-top: 15px;
+}
+
+.experience {
+	margin-bottom: 0!important;
+}
+
+.location
+{
+	font-family: "RebotoRegular";
+	font-size:14px !important;
+	color:#b6acaf !important;
+	text-align:center;
+}
+
+.misc-text
+{
+	font-size:12px;
+	font-family: "RebotoRegular";
+	text-align: justify;
+	color: #8f8f8f;
+	padding:20px;
+}
+
+.ratings .rating-list
+{
+	margin: 0 auto;
+	background:#FFF;
+	padding:5px;
+	margin-bottom:8px;
+	width:88%;
+	border: solid 1px #b6acaf;	
+}
+
+.ratings .span
+{
+	font-size:14px !important;
+	font-family: "RebotoBold";
+	color: #3c3c3d;
+	text-align: left;
+	padding-top: 4px;
+}
+
+.experiencetop {
+	padding-top: 8px;
+}
+
+.activeview  {
+	font-size: 12px!important;
+}
+
+.experienceicon {
+	background-image: url('../images/EXPERIENCIA.png');
+	height: 50px;
+	width: 50px;
+	background-repeat: no-repeat;
+}
+
+.educationicon {
+	background-image: url('../images/education.png');
+	height: 50px;
+	width: 50px;
+	background-repeat: no-repeat;
+}
+
+.skillsicon {
+	background-image: url('../images/skills.png');
+	height: 50px;
+	width: 50px;
+	background-repeat: no-repeat;
+}
+
+.skilledit {
+	font-family: "RebotoRegular";
+	color: #1a0e2b;
+	border: solid 1px #dbdbdb;
+}

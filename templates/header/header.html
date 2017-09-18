@@ -1,0 +1,40 @@
+<div class="container-fluid">
+        <div class="row">
+            <nav class="navbar navbar-fixed-top" role="navigation">
+                    <ul style="padding-left: 50px;" class="col-lg-9 nav navbar-nav">
+                        <li> <img src="styles/images/logo-login.png" style="padding:18px 50px 18px 18px;" class="img-responsive"> </li>
+                        <li class="active li-nav-ex"> <a href="#profile" class="profile-alterate">{{=Polyglo.t('profile.changeAccount')}}</a> </li>
+                        <li class="li-nav-ex"> <a href="#userInvite" class="profile-invite">{{=Polyglo.t('manageTeam.invite')}}</a> </li>
+                        <!--<li class="li-nav-ex"> <a href="#subscription"class="profile-subscription">{{=Polyglo.t('profile.subscribe')}}</a> </li>-->
+                        <li class="li-nav-ex"> <a href="#billing" class="profile-status">{{=Polyglo.t('profile.status')}}</a> </li>
+                        <li class="li-nav-ex"> <a href="#blogs" class="profile-blogs">{{=Polyglo.t('profile.blogs')}}</a> </li>
+                    </ul>
+                    <div class="col-lg-3 nav navbar-right top-nav container-fluid">
+                        <div class="user" style="display:block;margin:0 30px;">
+                            <a class="profile" href="javascript:void(0);" data-toggle="dropdown">
+                                <div class="profile-image-holder">
+                                    <div class="header-profile">{{?localstorage.get('image')}}
+                                        <img src="{{=localstorage.get('image')}}">
+                                        {{?}}
+                                        {{?!localstorage.get('image')}}
+                                        <img src="/img/user-shape.png">
+                                        {{?}}
+                                    </div>
+                                    <div class="nombre dropdown" ><span>{{=localstorage.get('user_name')}}</span> <b class="caret" style="color:#000;"></b></div>
+                                </div>
+                            </a>
+                            <ul class="dropdown-menu" style="margin:40px 60px 0 0">
+                                <div class="top_pointer"></div>
+                                <li>
+                                    <a href="#ca"><i class="fa fa-tachometer"></i> Dashboard</a>
+                                </li>
+                                <li>
+                                    <a href="#logout"><i class="fa fa-power-off"></i> {{=Polyglo.t('profile.exit')}}</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+            </nav>
+        </div>
+</div>
+

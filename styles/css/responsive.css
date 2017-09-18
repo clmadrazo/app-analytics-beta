@@ -1,0 +1,93 @@
+@charset "utf-8";
+/* CSS Document */
+
+@media (max-width:990px)
+{
+	.bottom-caret
+	{
+		display:none;
+	}
+	.prof-prev
+	{
+		text-align:center !important;
+	}		
+	.rating .rate-blog .stars img
+	{
+		width:12px;
+		height:12px;
+	}
+
+}
+@media (max-width: 767px)
+{
+	.select-section h2
+	{
+		text-align:center;
+	}
+	.prof-prev
+	{
+		text-align:center !important;
+	}
+
+	.bottom-form .form-section .input-section
+	{
+		width:70%;
+	}
+	.bottom-form .form-section
+	{
+		margin-left:-90px !important;
+	}
+	.rating .rate-blog .stars img
+	{
+		width:15px;
+		height:15px;
+	}
+	
+}
+@media (max-width: 652px)
+{
+	.bottom-form .form-section .form-label
+	{
+		text-align:left !important;
+	}
+}
+@media (max-width: 500px)
+{
+	.bottom-form .form-section
+	{
+		margin-left:0px !important;
+	}
+	.bottom-form .form-section .form-label
+	{
+		margin-left:0px;
+		text-align:left !important;
+	}
+	.bottom-form .form-section .input-section
+	{
+		float:none;
+		width:100%;
+	}
+	.select-section button
+	{
+		padding:8px 15px;
+	}
+	
+}
+@media (max-width:480px)
+{
+	.bottom-form .form-section .form-label
+	{
+		
+	}
+}
+@media (max-width: 320px)
+{
+	.select-section button
+	{
+		padding:8px 13px;
+	}
+	.bottom-form .form-section .form-label
+	{
+		
+	}
+}

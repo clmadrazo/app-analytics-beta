@@ -1,0 +1,146 @@
+<section>
+	<div id="login-container">
+
+        <div id="login-content-block">
+			<ul class="tabs">
+				<li>
+					<a href="#login" class="tab-login active">{{=Polyglo.t('login.login-a')}}</a>
+				</li>
+				<li>
+					<a href="#registration" class="tab-register">{{=Polyglo.t('login.register-a')}}</a>
+				</li>
+				<li>
+					<a href="#reset" class="tab-reset">{{=Polyglo.t('login.reset-a')}}</a>
+				</li>
+			</ul>
+			<div style="margin-top:30px;">
+				<div style="text-align:center;">
+
+					<div id="login" class="form-action show">
+						<br>
+						<form id="loginForm">
+							<div >
+								<div>
+									<input class="login-field" id="email" name="email" placeholder="Email" type="email" required>
+								</div>
+							</div>
+							<div >
+								<div>
+									<input class="login-field passlog" id="password" name="password" placeholder="{{=Polyglo.t('profile.password')}}" type="password" required>
+								</div>
+							</div>
+							<div class="error" id="errcontainerlogin"></div>
+
+							<div class="form-group" style="margin-top:10px;">
+								<div>
+									<button class="login-button" id="normal-login" type="submit">{{=Polyglo.t('login.enter')}}</button>
+								</div>
+							</div>
+
+						<!--	<div class="form-group">
+								<div class="col-sm-offset-2 col-sm-10">
+									<h6 style="color:#3f68a8;"><a href="#" id="forgotpasslink" style="color: #3f68a8; text-decoration: none">Olvide mi contraseña</a></h6>
+								</div>
+							</div> -->
+						</form>
+						<br>
+						<!--<span class="forgot-password-link">{{=Polyglo.t('login.forgotPassword')}}</span>-->
+					</div>
+
+					<div id="register" class="form-action hide">
+						<br>
+						<form class="register-form">
+							<div>
+								<div class="col-lg-6">
+									<input type="hidden" id="registrationCode" value="" />
+									<input class="form-control r-field" id="name" name="name" placeholder="{{=Polyglo.t('profile.name')}}" type="text" required>
+								</div>
+								<div class="col-lg-6">
+									<input class="form-control r-field" id="lastname" name="lastname" placeholder="{{=Polyglo.t('profile.lastname')}}" type="text" required>
+								</div>
+							</div>
+							<div>
+								<div class="col-lg-6">
+									<input class="form-control r-field" id="username" name="username" placeholder="{{=Polyglo.t('profile.username')}}" type="text" required>
+								</div>
+								<div class="col-lg-6">
+									<input class="form-control r-field" id="dateOfBirth-register" name="dateOfBirth" placeholder="{{=Polyglo.t('profile.birthdate')}}" type="text" required>
+								</div>
+							</div>
+							<div >
+								<div class="col-lg-12">
+									<input class="form-control r-field" id="email-register" name="email" placeholder="Email" type="email" required>
+								</div>
+							</div>
+							<div style="margin-bottom: 5px">
+								<div class="col-lg-6">
+									<input class="form-control r-field" id="password-register" name="password" placeholder="{{=Polyglo.t('profile.password')}}" type="password" required>
+								</div>
+								<div class="col-lg-6">
+									<input class="form-control r-field" id="re-password-register" name="password" placeholder="{{=Polyglo.t('profile.re-password')}}" type="password" required>
+								</div>
+							</div>
+							<div class="error" id="errcontainerregister"></div>
+							<div class="form-group" style="margin-top:10px;">
+								<div class="col-lg-12">
+									<input class="login-button" id="normal-register" type="button" value="{{=Polyglo.t('login.register')}}">
+								</div>
+							</div>
+						</form>
+					</div>
+					<div id="reset" class="form-action hide">
+						<br>
+						<form id="resetForm" style="margin:0 auto;">
+							<div class="container-fluid">
+								<div class="col-lg-12 message-code" style="text-align:justify"></div>
+								<div class="col-lg-12">									
+									<input class="form-control r-field" id="email-reset" name="email" placeholder="Email" type="email" required>
+									<input type="text" disabled="true" class="form-code-reset form-control r-field">
+									<input type="hidden" class="form-code-reset-2 form-control r-field">
+									<input type="password" class="form-control r-field form-password-reset" placeholder="{{=Polyglo.t('profile.password')}}" required>
+									<input type="password" class="form-control r-field form-repassword-reset" placeholder="{{=Polyglo.t('profile.re-password')}}" required>
+								</div>
+								<div class="error" id="errcontainerreset"></div>
+								<div class="form-group" style="margin-top:10px;">
+									<div class="col-lg-12">
+										<input class="login-button" id="normal-reset" type="button" value="{{=Polyglo.t('login.reset')}}">
+										<input style="width:100%;margin: 5px 0 20px;" class="login-button reset-password" type="button" value="{{=Polyglo.t('profile.update-password')}}">
+									</div>
+								</div>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-sm-12 text-center">
+					<img style="margin-left: 18px;" src="styles/images/logo-login.png">
+				</div>
+			</div>
+        </div>
+
+	</div>
+	<!-- Modal -->
+	<div class="modal fade" id="modal-register" tabindex="-1" role="dialog" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+					<h4>{{=Polyglo.t('login.register-a')}}</h4>
+				</div>
+				<div class="modal-body">
+					<div class="message">{{=Polyglo.t('registration.ok')}}</div>
+					<br>
+					<input class="btn btn-warning continue-finish-register" type="button" value="{{=Polyglo.t('general.back')}}">
+				</div>
+			</div><!-- /.modal-content -->
+		</div><!-- /.modal-dialog -->
+	</div><!-- /.modal -->
+
+</section><!--==main end=-->
+
+<div class="clearfix"></div>
+
+
+
+</div>

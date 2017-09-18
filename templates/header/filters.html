@@ -1,0 +1,105 @@
+{{
+var Roles =localstorage.get('roles').split(",");
+}}
+
+<div class="filters" id="filters1">
+    <div class="container">
+        <div class="left">
+        <!-- Clients -->
+        <div class="dropdown">
+            <button class="btn btn-default dropdown-toggle filter-dropdown" id="client-button" type="button"  data-toggle="dropdown" aria-haspopup="true" >
+                <span id="client-button-text">{{? it.selectedClient==0}} {{=Polyglo.t('filters.allClients')}} {{??}} {{=it.selectedClient}} {{?}}</span>
+                <span class="caret"></span>
+            </button>
+            <ul id="clients-filter-list" class="dropdown-menu" aria-labelledby="dropdownMenu1">
+            <li class="list-header"><div class="left"><a href="#" class="client-filter-link" data-id="0" data-client="{{=Polyglo.t('filters.allClients')}}">{{=Polyglo.t('filters.allClients')}} </a></div>
+                {{?Roles.indexOf('1')!=-1}}
+                <div id="buttonAddClient"  data-toggle="modal" data-target="#globalModal"  class="right add-button">+ADD</div>
+                {{?}}
+                <div style="clear:both"></div>
+            </li>
+            </ul>
+        </div>
+        <!-- Campaigns -->
+        <div class="dropdown">
+            <button class="btn btn-default dropdown-toggle filter-dropdown" type="button"  data-toggle="dropdown" aria-haspopup="true" >
+                <span id="campaign-button-text">{{? it.selectedCampaign==0}} {{=Polyglo.t('filters.allCampaigns')}} {{??}} {{=it.selectedCampaign}} {{?}}</span>
+                <span class="caret"></span>
+            </button>
+            <ul id="campaigns-filter-list" class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                <li class="list-header">
+                    <div class="left">
+                        <a href="#" class="campaign-filter-link" data-id="0" data-campaign="{{=Polyglo.t('filters.allCampaigns')}}">{{=Polyglo.t('filters.allCampaigns')}}
+                        </a>
+                    </div>
+                    {{?Roles.indexOf('1')!=-1}}
+                    <div class="right add-button"><a class="add-campaign-button" href="#manage">+ADD</a></div>
+                    {{?}}
+                    <div style="clear:both"></div>
+                </li>
+            </ul>
+        </div>
+        <!-- Medias -->
+        <div class="dropdown">
+            <button class="btn btn-default dropdown-toggle filter-dropdown" type="button"  data-toggle="dropdown" aria-haspopup="true" >
+                <span id="media-button-text">{{? it.selectedMedia==0}}{{=Polyglo.t('filters.allMedias')}} {{??}} {{=it.selectedMedia}} {{?}}</span>
+                <span class="caret"></span>
+            </button>
+            <ul id="medias-filter-list" class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                <li class="list-header">
+                    <div class="left">
+                        <a href="#" class="media-filter-link" data-id="0" data-media="{{=Polyglo.t('filters.allMedias')}}">
+                            {{=Polyglo.t('filters.allMedias')}}
+                        </a>
+                    </div>
+                    <div class="right"></div>
+                    <div style="clear:both"></div></li>
+            </ul>
+        </div>
+        <!-- Users -->
+        <div class="dropdown">
+            <button class="btn btn-default dropdown-toggle filter-dropdown" type="button"  data-toggle="dropdown" aria-haspopup="true" >
+                <span id="users-button-text">{{? it.selectedUser==0}}{{=Polyglo.t('filters.allUsers')}} {{??}} {{=it.selectedUser}} {{?}}</span>
+                <span class="caret"></span>
+            </button>
+            <ul id="users-filter-list" class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                <li class="list-header">
+                    <div class="left">
+                        <a href="#" class="users-filter-link" data-id="0" data-user="{{=Polyglo.t('filters.allUsers')}}">
+                            {{=Polyglo.t('filters.allUsers')}}
+                        </a>
+                    </div>
+                    <div class="right"></div>
+                    <div style="clear:both"></div></li>
+            </ul>
+        </div>
+        <!-- Status -->
+        {{?it.showStatus}}
+        <div class="dropdown">
+            <button class="btn btn-default dropdown-toggle filter-dropdown" type="button"  data-toggle="dropdown" aria-haspopup="true" >
+                <span id="status-button-text">{{? it.selectedStatus==0}}{{=Polyglo.t('filters.allStatus')}} {{??}} {{=it.selectedStatus}} {{?}}</span>
+                <span class="caret"></span>
+            </button>
+            <ul id="status-filter-list" class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                <li class="list-header">
+                    <div class="left">
+                        <a href="#" class="status-filter-link" data-id="0" data-status="{{=Polyglo.t('filters.allStatus')}}">
+                            {{=Polyglo.t('filters.allStatus')}}
+                        </a>
+                    </div>
+                    <div class="right"></div>
+                    <div style="clear:both"></div></li>
+            </ul>
+        </div>
+        {{?}}
+
+    </div>
+        <div class="right">
+            <form class="navbar-form navbar-left" role="search">
+                <div id="searchHolder" class="form-group">
+                </div>
+            </form>
+        </div>
+        <div style="clear:both"></div>
+    </div>
+</div>

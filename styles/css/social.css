@@ -1,0 +1,87 @@
+.plugin #providers .providers_group .scroll div {
+  margin: 0 auto !important;
+}
+
+.plugin #providers .provider {
+  width: 210px !important;
+  margin-bottom: 2px !important;
+  padding: 2px 4px 4px;
+}
+
+.plugin #providers .name {
+  display: none !important;
+}
+
+.plugin #providers .button {
+  background: url(../images/logosSprite.png) no-repeat scroll 0 0 transparent !important;
+  height: 30px !important;
+  width: 210px !important;
+}
+
+.plugin #providers #button_facebook {
+  background-position: 50% -3px !important;
+}
+
+.plugin #providers #button_google {
+  background-position: 50% -35px !important;
+}
+
+.plugin #providers #button_twitter {
+  background-position: 50% -67px !important;
+}
+
+.plugin #providers #button_yahoo {
+  background-position: 50% -99px !important;
+}
+
+.plugin #providers #button_linkedin {
+  background-position: 50% -131px !important;
+}
+
+.plugin #providers #button_openid {
+  background-position: 50% -163px !important;
+}
+
+.plugin #providers #button_wordpress {
+  background-position: 50% -195px !important;
+}
+
+.plugin #providers #button_hyves {
+  background-position: 50% -227px !important;
+}
+
+.plugin #providers #button_vkontakte {
+  background-position: 50% -259px !important;
+}
+
+.plugin #providers #button_paypal {
+  background-position: 50% -291px !important;
+}
+
+.plugin #providers #button_stackexchange {
+  background-position: 50% -323px !important;
+}
+
+.plugin #providers #button_livejournal {
+  background-position: 50% -355px !important;
+}
+
+.plugin #providers #button_steam {
+  background-position: 50% -387px !important;
+}
+
+.plugin #providers #button_windowslive {
+  background-position: 50% -419px !important;
+}
+
+.plugin #providers #button_youtube {
+  background-position: 50% -451px !important;
+}
+
+.plugin #providers #button_xing {
+  background-position: 50% -483px !important;
+}
+
+.plugin #providers .button .tick {
+  right: -4px;
+}

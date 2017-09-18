@@ -1,0 +1,42 @@
+<div class="container">
+    <div class="row header-step">
+        
+    </div>
+    <div class="blogs">
+
+    </div>
+</div>
+<!-- Modal -->
+<div class="modal fade" id="upgrade" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h4>{{=Polyglo.t('general.update_blog')}}</h4>
+            </div>
+            <div class="modal-body">
+                <form class="blogs-update" role="form" style="margin-top:-20px;">
+                    <div class="form-group">
+                        <label class="col-sm-5 control-label">{{=Polyglo.t('general.select_blog')}}</label>
+                        <div class="col-sm-7">
+                            <select class="select-blogs form-control">
+                            </select>
+                        </div>
+                    </div>
+                    <br><br>
+                    <div class="form-group">
+                        <label class="col-sm-5 control-label">{{=Polyglo.t('general.new_blog')}}</label>
+                        <div class="col-sm-7">
+                            <input class="form-control new-name" type="text" placeholder="{{=Polyglo.t('general.nblog')}}" required>
+                            <input class="hidden" type="text" value="">
+                        </div>
+                    </div>
+                    <br><br>
+                    <div class="error"></div>
+                    <input class="btn btn-warning submit-update" style="margin-left:14px" type="submit" value="{{=Polyglo.t('general.update_blog')}}">
+                </form>
+
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->

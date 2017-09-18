@@ -1,0 +1,87 @@
+{{
+var  imagePath = 'img/user-shape.png';
+}}
+
+{{?it.data}}
+    {{
+if (it.data.absolutePath!=''){
+imagePath = it.data.absolutePath;}
+    }}
+{{?}}
+
+
+
+
+<link href="/styles/css/fileinput/fileinput.css" media="all" rel="stylesheet" type="text/css" />
+<script src="/js/lib/fileinput/fileinput.js" type="text/javascript"></script>
+<script src="/js/lib/fileinput/fileinput_locale_pt-BR.js" type="text/javascript"></script>
+
+
+<!-- some CSS styling changes and overrides -->
+<style>
+    .kv-avatar img{
+        border-radius: 50%;
+    }
+    .kv-avatar .file-preview-frame,.kv-avatar .file-preview-frame:hover {
+        margin: 0;
+        padding: 0;
+        border: none;
+        border-radius: 50%;
+        box-shadow: none;
+        text-align: center;
+
+    }
+    .kv-avatar .file-input {
+
+        text-align: center;
+
+    }
+
+
+    
+</style>
+
+<!-- the avatar markup -->
+<div align="center">
+    <form class="text-center" action="/avatar_upload.php" method="post" enctype="multipart/form-data">
+        <div class="kv-avatar center-block" >
+            <input id="image" name="avatar" type="file" class="file-loading">
+        </div>
+        <div id="kv-avatar-errors" class="center-block" style="display:none">
+
+        </div>
+        <!-- include other inputs if needed and include a form submit (save) button -->
+        <div class="form-group" style="text-align: left">
+        </div>
+    </form>
+
+</div>
+<!-- your server code `avatar_upload.php` will receive `$_FILES['avatar']` on form submission -->
+
+<!-- the fileinput plugin initialization -->
+<script>
+    var btnCust = '<button type="button" class="btn btn-default" title="Add picture tags" ' +
+            'onclick="alert(\'Call your custom code here.\')">' +
+            '<i class="glyphicon glyphicon-tag"></i>' +
+            '</button>';
+    $("#image").fileinput({
+        overwriteInitial: true,
+        resizeImage: true,
+        maxImageWidth: 250,
+        resizePreference: 'width',
+        maxFileSize: 1500,
+        showClose: false,
+        showCaption: false,
+        browseLabel: Polyglo.t("addClient.changePicture"),
+        removeLabel: '',
+        browseIcon: '',
+
+
+        elErrorContainer: '#kv-avatar-errors',
+        msgErrorClass: 'alert alert-block alert-danger',
+        defaultPreviewContent: "<div class='profile-image-preview' style='background-image:url(\"{{=imagePath}}\")' id='defaultImage' >",
+        layoutTemplates: {main2: '{preview} ' +   ' {remove} {browse}'},
+        allowedFileExtensions: ["jpg"]
+    });
+    //, "png", "gif"
+</script>

@@ -1,0 +1,405 @@
+	<script src="js/lib/sociallogin/oneall.js"></script>
+	<section class="main">
+		<div class="jumbotron jumbo1">
+			<div class="container">
+				<div class="row centered">
+					<img class="img-responsive" src="styles/images/new-design/icon-tophome-freelance.png" />
+				</div>
+				<div class="row">
+					<div class="message container col-md-6">
+						<h1>{{=it.lang.home.block1.joinline}}</h1>
+						<h2>{{=it.lang.home.block1.createportfolio}}</h2>
+					</div>
+				</div>
+
+				<div class="row">
+					<div class="container col-md-6 text-center">
+					<div class="social-icons col-sm-6" style="padding-left:200px; margin-top: 40px; width:45%; margin-left:28px;">
+							
+							<div id="social_login"></div>
+						</div>
+
+						<div class="social-icons col-sm-6">
+							<form class="form-horizontal" id="registerFormHomeOne">
+								<div class="form-group">
+									<div class="col-sm-10" style="text-align:left;">
+										<input class="form-control no-radius home-form" id=
+										"name" name="name" placeholder=
+										"{{=it.lang.home.inputsplaceholders.onlyname}}" type="text"><input class="form-control no-radius" id=
+										"lastname" name="lastname" placeholder=
+										"{{=it.lang.home.inputsplaceholders.onlylastname}}" type="text">
+									</div>
+								</div>								
+
+								<div class="form-group">
+									<div class="col-sm-10">
+										<input class="form-control no-radius home-form" id=
+										"email" name="email" placeholder="{{=it.lang.home.inputsplaceholders.email}}"
+										type="email">
+									</div>
+								</div>
+
+								<div class="form-group">
+									<div class="col-sm-10" style="text-align:left;">
+										<input class="form-control no-radius home-form" id="password" name="password" placeholder=
+										"{{=it.lang.home.inputsplaceholders.password}}" type="password"><input class="form-control no-radius" id="passwordrepeat" name="passwordrepeat" placeholder=
+										"{{=it.lang.home.inputsplaceholders.passwordrepeat}}" type="password">
+									</div>
+								</div>	
+
+								<div id="hometoperrors"></div>
+
+								<div class="form-group">
+									<div class="col-sm-offset-2 col-sm-10" style="text-align:left;">
+										<button class="btn btn-default" type=
+										"submit" id="register-buttonTop" style="width:45%;">{{=it.lang.home.inputsplaceholders.joinnowbutton}}</button>
+									</div>
+								</div>
+
+								<h6 style="color:white; text-align:left;"><a href="#login" style=
+								"color: #b7b7b7; text-decoration: underline; font-size:1.1em;">{{=it.lang.home.inputsplaceholders.haveanaccount}}</a></h6>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="how-it-works">
+		<div class="container text-center">
+			<div class="row">
+				<div class="section-title">
+					<h1 style="color:#e93793;">{{=it.lang.home.generalmiss.howitworks}}</h1>
+				</div>
+				<div class="title-line"></div>
+			</div>
+
+			<div class="row" style="margin-top:25px;">
+				<div class="col-3" style="width:18.7%;">
+					<img src="styles/images/new-design/how-works-step1.png" />
+				</div>
+				<div class="col-1 topmarginarrow">
+					<img src="styles/images/new-design/how-works-arrow.png" />
+				</div>
+				<div class="col-3" style="width:18.7%;">
+					<img src="styles/images/new-design/how-works-step2.png" />
+				</div>
+				<div class="col-1 topmarginarrow">
+					<img src="styles/images/new-design/how-works-arrow.png" />
+				</div>
+				<div class="col-3" style="width:18.7%;">
+					<img src="styles/images/new-design/how-works-step3.png" />
+				</div>
+				<div class="col-1 topmarginarrow">
+					<img src="styles/images/new-design/how-works-arrow.png" />
+				</div>
+				<div class="col-3" style="width:18.7%;">
+					<img src="styles/images/new-design/how-works-step4.png" />
+				</div>
+			</div>
+			
+			<div class="row">
+				<div class="col-3" style="padding:0; width:18.7%;">					
+						<div class="how-it-works-title">
+							{{=it.lang.home.generalmiss.registerformhome}}
+						</div>
+						<div class="how-it-works-text">
+							{{=it.lang.home.generalmiss.completeform}}
+						</div>
+				</div>				
+				<div class="col-1"></div>
+				<div class="col-3" style="padding:0; width:18.7%;">					
+						<div class="how-it-works-title">
+							{{=it.lang.home.generalmiss.completeportfolio}}
+						</div>
+						<div class="how-it-works-text">
+							{{=it.lang.home.generalmiss.teambuild}}
+						</div>
+				</div>
+				<div class="col-1"></div>
+				<div class="col-3" style="padding:0; width:18.7%;">					
+						<div class="how-it-works-title">
+							{{=it.lang.home.generalmiss.applyprojects}}
+						</div>
+						<div class="how-it-works-text">
+							{{=it.lang.home.generalmiss.receivecontents}}
+						</div>
+				</div>
+				<div class="col-1"></div>
+				<div class="col-3" style="padding:0; width:18.7%;">						
+						<div class="how-it-works-title">
+							{{=it.lang.home.generalmiss.earnmoney}}
+						</div>
+						<div class="how-it-works-text">
+							{{=it.lang.home.generalmiss.analyzetraffic}}
+						</div>
+				</div>
+			</div>
+
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="clients">
+		<div class="container text-center" id="client-logo">
+			<div class="row">
+				<div class="section-title">
+					<h1 style="color:#e93793;">{{=it.lang.home.block2.companieshead}}</h1>
+				</div>
+				<div class="title-line"></div>
+			</div>				
+
+			<div class="row" style="margin-top:20px;">
+					<div class="col-sm-10" style="float:none; margin:0 auto;">
+
+						<div class="col-sm-3" style="width:18.7%;"><img class="img-responsive" src=
+							"styles/images/new-design/logo5.png"></div>
+							
+						<div class="col-sm-3" style="width:18.7%;"><img class="img-responsive" src=
+							"styles/images/new-design/logo1.png"></div>
+
+						<div class="col-sm-3" style="width:18.7%;"><img class="img-responsive" src=
+							"styles/images/new-design/logo2.png"></div>
+
+						<div class="col-sm-3" style="width:18.7%;"><img class="img-responsive" src=
+							"styles/images/new-design/logo3.png"></div>
+
+						<div class="col-sm-3" style="width:18.7%;"><img class="img-responsive" src=
+							"styles/images/new-design/logo4.png"></div>
+
+						
+					</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="work-skills">
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-12 text-center skills-img">
+				
+					<div class="col-sm-4" style="padding-top:157px;">
+						<div class="skills-title">
+							{{=it.lang.home.block3.freelancejobs1}}
+						</div>
+						<div class="skills-text">
+							{{=it.lang.home.block3.freelancejobs2}}							
+						</div>
+					</div>
+
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="benefits">
+		<div class="container text-center">
+			<div class="row" style="margin-top:20px;">
+				<div class="title-line"></div>
+				<div class="section-title">
+					<h1 style="color:#444444;">{{=it.lang.home.block4.benefits}}</h1>
+				</div>				
+			</div>
+
+			<div class="fade455" id="test-box" style="margin-top:40px;">
+				<div class="row">
+					<div class="col-sm-6">
+						<div class="benefits-text">
+							<h2 style="color:#f2a549">{{=it.lang.home.block4.benefblock1title}}</h2>
+							<p>{{=it.lang.home.block4.benefblock1text}}</p>
+						</div>
+					</div>
+
+					<div class="col-sm-6">
+						<div class="benefits-text">
+							<h2 style="color:#05a2d9">{{=it.lang.home.block4.benefblock2title}}</h2>
+							<p>{{=it.lang.home.block4.benefblock2text}}</p>
+						</div>
+					</div>
+				</div>
+
+				<div class="row">
+					<div class="col-sm-6">
+						<div class="benefits-text">
+							<h2 style="color:#85b828">{{=it.lang.home.block4.benefblock3title}}</h2>
+							<p>{{=it.lang.home.block4.benefblock3text}}</p>
+						</div>
+					</div>
+
+					<div class="col-sm-6">
+						<div class="benefits-text">
+							<h2 style="color:#fa4d61">{{=it.lang.home.block4.benefblock4title}}</h2>
+							<p>{{=it.lang.home.block4.benefblock4text}}</p>
+						</div>
+					</div>
+				</div>
+
+				<div class="row" style="margin-top:50px;">
+					<button class="btn btn-default regbuttonev" style="width:25%; font-size:1em;">{{=it.lang.home.block5.createportfoliobutton}}</button>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="be-part">		
+		<div class="container text-center">
+			<div class="row">
+				<div class="col-sm-12">
+					<h1 class="be-part-title">{{=it.lang.home.block5.bepart}}</h1>
+				</div>
+			</div>
+
+			<div class="row" id="pro-box" style="margin: 0 auto; width:70%;">
+				<div class="col-6" style="margin-top: 25px;">
+					<div class="thumbnail padding-in-box marginbelow" style="max-height: 310px;">
+						<div class="face"><img class="img-responsive" src=
+						"styles/images/face1.png"></div>
+
+						<div class="be-part-data">
+							<div class="name-bepart">
+								{{=it.lang.home.nametesti1}}
+							</div>
+							<div class="country-bepart">
+								{{=it.lang.home.counttesti1}}
+							</div>
+						</div>
+
+						<div class="text">
+							<p style="font-style: italic;">"{{=it.lang.home.testi1}}"</p>
+						</div>
+					</div>
+				</div>
+
+				<div class="col-6" style="margin-top: 25px;">
+					<div class="thumbnail padding-in-box marginbelow" style="max-height: 310px;">
+						<div class="face"><img class="img-responsive" src=
+						"styles/images/face2.png"></div>
+
+						<div class="be-part-data">
+							<div class="name-bepart">
+								{{=it.lang.home.nametesti2}}
+							</div>
+							<div class="country-bepart">
+								{{=it.lang.home.counttesti2}}
+							</div>
+						</div>
+
+						<div class="text">
+							<p style="font-style: italic;">"{{=it.lang.home.testi2}}"</p>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="row" style="margin-top:28px;">
+				<button class="btn btn-default regbuttonev" style="width:25%; font-size:1em;">{{=it.lang.home.block6.registerfree}}</button>
+			</div>
+		</div>
+	</section>
+
+	<!-- <section class="last-freelancers">		
+		<div class="container text-center" style="padding-top:30px;">
+				<div class="last-free-title1">
+					{{=it.lang.home.block6.lastfreelancers1}}
+				</div>
+
+				<div class="last-free-title2">
+					{{=it.lang.home.block6.lastfreelancers2}}
+				</div>
+
+				<div class="clearfix"></div>
+
+				<div id="wrapper2">
+
+					<div id="reg-user">
+						<div id="carousel">
+							<div class="box" style=
+							"margin-left:14px !important;">
+								<div class="user-face pull-left"><img src=
+								"styles/images/freelancer-face.png"></div>
+								<div class="user-name pull-left">
+									<div class="slidename">Carlos Rodriguez</div>
+									<div class="slidedesc">Redactor de Deportes</div>
+									<div class="slideregistered">Se ha unido hace 2 días</div>
+								</div>
+							</div>
+
+							<div class="box">
+								<div class="user-face"><img src=
+								"styles/images/freelancer-face2.png"></div>
+
+								<div class="user-name pull-left">
+									<div class="slidename">Carlos Rodriguez</div>
+									<div class="slidedesc">Redactor de Deportes</div>
+									<div class="slideregistered">Se ha unido hace 2 días</div>
+								</div>
+							</div>
+
+							<div class="box">
+								<div class="user-face"><img src=
+								"styles/images/freelancer-face3.png"></div>
+
+								<div class="user-name pull-left">
+									<div class="slidename">Carlos Rodriguez</div>
+									<div class="slidedesc">Redactor de Deportes</div>
+									<div class="slideregistered">Se ha unido hace 2 días</div>
+								</div>
+							</div>
+
+							<div class="box">
+								<div class="user-face"><img src=
+								"styles/images/freelancer-face.png"></div>
+
+								<div class="user-name pull-left">
+									<div class="slidename">Carlos Rodriguez</div>
+									<div class="slidedesc">Redactor de Deportes</div>
+									<div class="slideregistered">Se ha unido hace 2 días</div>
+								</div>
+							</div>
+						</div><a href="#" id="prev"></a> <a href="#" id=
+						"next"></a>
+					</div>
+				</div>
+				<div class="clearfix"></div>
+			</div>
+
+			<div class="clearfix"></div>
+
+			<div style="text-align:center; margin-top:25px;">
+				<button class="btn btn-default regbuttonev" style="width:17%;">{{=it.lang.home.block6.registerfree}}</button>			
+			</div>
+		
+	</section> -->
+
+
+
+	<div class="clearfix"></div>
+
+<div class="modal fade resetpass-modal" id="resetpass-modal" role="dialog" aria-hidden="true">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header" style="border:none;">
+				<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+			</div>
+			<form name="resetpassform" id="resetpassform" style="margin-top:0;">
+				<input type="hidden" id="emailchangehome" value="" />
+				<input type="hidden" id="tokenchangehome" value="" />
+		      	<div class="modal-body">
+		      		<p style="text-align:center;">{{=it.lang.login.enternewpasswordhome}}</p>
+		      		<p style="text-align:center;">
+		      			<input class="form-control" id="newpasshome" name="newpasshome" placeholder="{{=it.lang.account.new}}" type="password">
+		      		</p>
+		      		<p style="text-align:center;">
+		      			<input class="form-control" id="newpasshomeval" name="newpasshomeval" placeholder="{{=it.lang.account.confirm}}" type="password">
+		      		</p>
+		      		<div class="error" id="errcontainerhome"></div>
+		      	</div>
+		      	<div class="modal-footer" style="margin-top:0px; border:none;">	      		
+			        <button type="submit" class="btn btn-primary" style="background-color:#c2508c; border-color:#c2508c; font-weight:bold;"><span id="changepasshomebutton">{{=it.lang.general.accept}}</span></button>			       
+			    </div>
+			</form>
+		</div>
+	</div>
+</div>

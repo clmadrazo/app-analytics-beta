@@ -1,0 +1,60 @@
+{{?it.data}}
+    {{
+        formId = it.data.id;
+        formFirstName =  it.data.firstName;
+        formLastName  =  it.data.lastName;
+        formLanguage  =  it.data.language_id;
+    }}
+{{?}}
+{{?!it.data}}
+    {{
+        formId = '';
+        formFirstName = '';
+        formLastName  = '';
+        formLanguage  = '';
+    }}
+{{?}}
+<form  id="loginForm">
+    <input type="hidden" name="txtUserId" id="txtUserId" value="{{=formId}}" />
+    <input type="hidden" name="txtRegistrationCode" id="registrationCode"/>
+    <div >
+        <div>
+            <input class="form-control" type="text" id="txtName" placeholder="{{=Polyglo.t('profile.name')}}" name="txtName" value="{{=formFirstName}}"/>
+        </div>
+    </div>
+    <div >
+        <div>
+            <input class="form-control" type="text" id="txtLastName" placeholder="{{=Polyglo.t('profile.lastname')}}" name="txtLastName" value="{{=formLastName}}"/>
+        </div>
+    </div>
+    <div >
+        <div>
+            <select class="form-control" id="txtLanguageId" name="txtLanguageId">
+                {{
+                    v1= (formLanguage==1)?"selected":"";
+                    v2= (formLanguage==2)?"selected":"";
+                    v3= (formLanguage==3)?"selected":"";
+                }}
+                <option value="1" {{=v1}}>{{=Polyglo.t('language.pt')}}</option>
+                <option value="2" {{=v2}}>{{=Polyglo.t('language.es')}}</option>
+                <option value="3" {{=v3}}>{{=Polyglo.t('language.en')}}</option>
+            </select>
+        </div>
+    </div>
+    <div >
+        <div>
+            <input class="form-control passlog" placeholder="{{=Polyglo.t('profile.password')}}" type="password" id="txtPass" name="txtPass" />
+        </div>
+    </div>
+    <div >
+        <div>
+            <input class="form-control passlog" placeholder="{{=Polyglo.t('profile.confirmPassword')}}" type="password" id="txtConfirmPass" name="txtConfirmPass" />
+        </div>
+    </div>
+    <div class="error" id="errcontainerprofile"></div>
+
+    <div class="form-group" style="margin-top:2px;">
+        <button style="width: 90%" class="login-button" id="register" type="button">{{=Polyglo.t('profile.save')}}</button>
+    </div>
+    <div style="clear: both"></div>
+</form>

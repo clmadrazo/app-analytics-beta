@@ -1,0 +1,139 @@
+.lineBox {
+    display: block;
+    width: 100%;
+    min-height: 10px;
+    flex: 50%;
+    text-align: left;
+}
+.splitSpaceButton{
+    margin:5px;
+    width: 45%;
+    float: left;
+    text-align: left;
+
+}
+.splitSpaceButton button{
+    width:100%;
+}
+
+.image {
+    width: 100%;
+    text-align: center;
+    align-content: center;
+}
+.image img {
+    margin: 0;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    width: 62px;
+    height: auto;
+}
+
+/**** Team Manage *****/
+.title-page{
+    font-size: 18px;
+    font-color: #909090;
+}
+.team{
+
+    align: center;
+    height: auto;
+    border-radius: 8px;
+    border: 1px #CFCFCF solid;
+    background-color: none;
+    box-shadow: 3px 3px 2px #EAEAEA;
+   margin: 20px;
+    padding-bottom: 7px;
+}
+
+
+.team-title{
+    width: 100%;
+    margin: 1px #EEEEEE solid;
+    padding: 20px;
+
+    border-bottom: 1px solid #EEEEEE ;
+}
+.team-bottom-right{
+    cursor: pointer;
+    background: -webkit-linear-gradient(#8b5ebd 50%, #8155b3 50%); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(#8b5ebd 50%, #8155b3 50%); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(#8b5ebd 50%, #8155b3 50%); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(#8b5ebd 50%, #8155b3 50%);
+
+    padding: 2px 10px 2px 9px;
+    font-size: 17px;
+    border-radius: 5px;
+    border: none;
+    color: white;
+    font-weight: normal;
+    float: right;
+}
+.team-content{
+    padding:10px;
+    padding-left: 50px;
+    padding-right: 50px;
+    display: block;
+}
+.team-content-user{
+    float:left;
+    margin: 0 25px 0 10px;
+
+}
+.team-content-user:hover{
+
+}
+
+.team-user-image{
+    float: left;
+
+}
+.team-user-image img{
+    width: 62px;
+    height: 62px;
+}
+
+.team-user-details{
+    float: left;
+    padding-left: 10px;
+
+}
+.team-content-user:hover{
+
+    cursor: pointer;
+}
+.team-content-user:active{
+    background-color: #dbe3dc;
+}
+.red{
+    color:red;
+}
+
+.team-content-user img{
+    margin-right: 5px;
+    /*
+        background: #ec3995;
+        background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIxMDAlIiB5Mj0iMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2VjMzk5NSIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNmZGE4MWEiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+        background: -moz-linear-gradient(left,  #ec3995 0%, #fda81a 100%); // FF3.6+
+        background: -webkit-gradient(linear, left top, right top, color-stop(0%,#ec3995), color-stop(100%,#fda81a)); // Chrome,Safari4+
+        background: -webkit-linear-gradient(left,  #ec3995 0%,#fda81a 100%); //Chrome10+,Safari5.1+
+        background: -o-linear-gradient(left,  #ec3995 0%,#fda81a 100%); / Opera 11.10+
+        background: -ms-linear-gradient(left,  #ec3995 0%,#fda81a 100%); / IE10+
+        background: linear-gradient(to right,  #ec3995 0%,#fda81a 100%); / W3C
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ec3995', endColorstr='#fda81a',GradientType=1 ); // IE6-8 /
+    */
+
+    padding:3px !important;
+    margin: auto;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    width:100%
+    /*width: 62px;*/
+    height: auto;
+    text-align: center;
+    display: block;
+
+}
+/****End Team Manage ****/

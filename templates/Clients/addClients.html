@@ -1,0 +1,126 @@
+{{
+    var formClientId = '';
+    var formClientName= '';
+    var twitterSection = '<div class="tw-log-btn" id="twitter-login-button"><a style="cursor:pointer"><img alt="Sign in with Twitter" src="/img/sign-in-with-twitter-gray.png" /></a></div>';
+    var formPath = 'img/user-shape.png';
+}}
+{{? it.client}}
+    {{
+        it.client = it.client[0].dataset;
+    }}
+{{?}}
+
+{{? !it.client}}
+    {{
+        it.client = false;
+    }}
+{{?}}
+
+
+{{? it.client }}
+    {{
+         formClientId = it.client.id;
+         formClientName = it.client.client;
+         if (it.client.twitter_name != '' && it.client.twitter_name != 'null') {
+             twitterSection = '<div style="margin-top: 14px;text-align: center;">' + Polyglo.t('general.loginTwitterPage') + it.client.twitter_name + '</div>';
+         }
+         if (it.client.path!='')
+            formPath = it.client.path;
+    }}
+{{?}}
+
+<link href="/styles/css/manageTeam/manageTeam.css" media="all" rel="stylesheet" type="text/css" />
+<link href="/styles/css/fileinput/fileinput.css" media="all" rel="stylesheet" type="text/css" />
+<script src="/js/lib/fileinput/fileinput.js" type="text/javascript"></script>
+<script src="/js/lib/fileinput/fileinput_locale_pt-BR.js" type="text/javascript"></script>
+
+
+<!-- some CSS styling changes and overrides -->
+<style>
+    .kv-avatar img{
+        border-radius: 50%;
+    }
+    .kv-avatar .file-preview-frame,.kv-avatar .file-preview-frame:hover {
+        margin: 0;
+        padding: 0;
+        border: none;
+        border-radius: 50%;
+        box-shadow: none;
+        text-align: center;
+        align-self: center;
+        vertical-align: middle;
+        horiz-align: center;
+    }
+    .kv-avatar .file-input {
+
+        text-align: center;
+        align-self: center;
+        vertical-align: middle;
+        horiz-align: center;
+    }
+    .fb-log-btn {
+        float: left;
+        margin: 12px 0 8px 0;
+    }
+    .tw-log-btn {
+        float: left;
+        margin: 8px 0 8px 12px;
+    }
+</style>
+
+<!-- the avatar markup -->
+<div id="kv-avatar-errors" class="center-block" style="width:800px;display:none"></div>
+<form class="text-center" action="/avatar_upload.php" method="post" enctype="multipart/form-data">
+    <div class="kv-avatar center-block" style="width:100%" align="center">
+        <input id="fileClient" name="avatar" type="file" class="file-loading">
+    </div>
+    <!-- include other inputs if needed and include a form submit (save) button -->
+    <div class="form-group" style="text-align: left">
+        <label for="name">{{=Polyglo.t('addClient.clientName')}}:</label>
+        <input type="text" class="form-control" id="clientName" name="clientName" value="{{=formClientName}}">
+        <input type="hidden" name="formClientId" id="formclientId" value="{{=formClientId}}">
+        <div class="fb-login-button fb-log-btn" scope="public_profile,email,manage_pages, publish_pages, user_photos, user_posts, publish_actions" data-max-rows="1" data-size="medium" data-show-faces="false" data-auto-logout-link="true"></div>
+        {{=twitterSection}}
+        <input type="hidden" name="twitter-token" id="twitter-token" />
+        <input type="hidden" name="twitter-secret" id="twitter-secret" />
+        <input type="hidden" name="twitter-name" id="twitter-name" />
+        <div style="clear:both;"></div>
+        <div id="fbk-section"></div>
+    </div>
+    <div clase="lineBox">
+        <div class="splitSpaceButton" >
+            <button  class="btn btn-primary" id="btnSalve" type="button">{{=Polyglo.t('general.save')}}</button>
+        </div>
+        <div class="splitSpaceButton">
+            <button  class="btn btn-danger" id="btnDelete" type="button">{{=Polyglo.t('general.delete')}}</button></div>
+        <div class="clearfix"></div>
+    </div>
+
+
+</form>
+<!-- your server code `avatar_upload.php` will receive `$_FILES['avatar']` on form submission -->
+
+<!-- the fileinput plugin initialization -->
+<script>
+    var btnCust = '<button type="button" class="btn btn-default" title="Add picture tags" ' +
+            'onclick="alert(\'Call your custom code here.\')">' +
+            '<i class="glyphicon glyphicon-tag"></i>' +
+            '</button>';
+
+    $("#fileClient").fileinput({
+        overwriteInitial: true,
+        maxFileSize: 1500,
+        showClose: false,
+        showCaption: false,
+        browseLabel: Polyglo.t("addClient.changePicture"),
+        browseIcon: '',
+        elErrorContainer: '#kv-avatar-errors',
+        msgErrorClass: 'alert alert-block alert-danger',
+        defaultPreviewContent: "<div class='profile-image-preview' style='background-image:url(\"{{=formPath}}\"); margin:0 auto;' id='defaultImage' >",
+        layoutTemplates: {main2: '{preview} ' +   ' {remove} {browse}'},
+        allowedFileExtensions: ["jpg"]
+    });
+
+
+    //, "png", "gif"
+</script>

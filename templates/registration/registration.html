@@ -1,0 +1,55 @@
+<section>
+    <div id="login-container">
+
+        <div id="login-content-block">
+            <div class="row">
+                <div class="col-sm-12 text-center">
+                    <img src="styles/images/logo-login.png">
+                </div>
+            </div>
+
+
+            <div style="margin-top:30px;">
+                <div style="text-align:center;">
+
+                    <div>
+                        <form  id="loginForm">
+                            <div >
+                                <div>
+                                    <input class="login-field" id="email" name="email" placeholder="Email" type="email">
+                                </div>
+                            </div>
+                            <div >
+                                <div>
+                                    <input class="login-field passlog" id="password" name="password" placeholder="{{=Polyglo.t('profile.password')}}" type="password">
+                                </div>
+                            </div>
+                            <div class="error" id="errcontainerlogin"></div>
+
+                            <div class="form-group" style="margin-top:10px;">
+                                <div>
+                                    <button class="login-button" id="normal-login" type="submit">{{=Polyglo.t('login.enter')}}</button>
+                                </div>
+                            </div>
+
+                            <!--	<div class="form-group">
+                                    <div class="col-sm-offset-2 col-sm-10">
+                                        <h6 style="color:#3f68a8;"><a href="#" id="forgotpasslink" style="color: #3f68a8; text-decoration: none">Olvide mi contraseña</a></h6>
+                                    </div>
+                                </div> -->
+                        </form>
+                        <br>
+                        <span class="forgot-password-link">{{=Polyglo.t('login.forgotPassword')}}</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section><!--==main end=-->
+
+<div class="clearfix"></div>
+
+
+
+</div>

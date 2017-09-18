@@ -1,0 +1,53 @@
+<div class="row">
+                <div class="col-lg-2 navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                        <span class="sr-only"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="#"><img src="img/logo.png" alt=""></a>
+                </div>
+                <div class="col-lg-10 nav top-nav container-fluid">
+                    <div class="col-md-9 div_back">
+                        <a href="#ca"><i class="fa fa-arrow-left hidden"></i>Content Analytics</a>
+                    </div>
+                    <div class="col-md-3 user" style="display:block;margin:0 auto 0 auto;">
+                        <a class="profile" href="javascript:void(0);" data-toggle="dropdown">
+                            <div class="profile-image-holder">
+                                <div class="header-profile">{{?localstorage.get('image')}}
+                                    <img src="{{=localstorage.get('image')}}">
+                                    {{?}}
+                                    {{?!localstorage.get('image')}}
+                                    <img src="/img/user-shape.png">
+                                    {{?}}
+                                </div>
+                            </div>
+                            <div class="nombre dropdown" ><span>{{=localstorage.get('user_name')}}</span> <b class="caret" style="color:#000;"></b></div>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <div class="top_pointer"></div>
+                            <li>
+                                <a href="#profile"><i class="fa fa-user"></i> {{=Polyglo.t('profile.description')}}</a>
+                            </li>
+                            <li>
+                                <a href="social-analytics.zip"><i class="glyphicon glyphicon-download-alt"></i> Plugin Wordpress</a>
+                            </li>
+                            <li>
+                                <a href="#logout"><i class="fa fa-power-off"></i> {{=Polyglo.t('profile.exit')}}</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="collapse navbar-collapse navbar-ex1-collapse nav_left">
+                <ul class="nav navbar-nav side-nav">
+                    <span><strong>Dashboard</strong></span>
+                    <li class="sel">
+                        <a href="#analytics"><i class="fa fa-fw fa-dashboard"></i><img src="img/pie_white.png" alt=""> Analytics</a>
+                    </li>
+                    <!-- <li>
+                      <a href="#"><i class="fa fa-fw fa-dashboard"></i><img src="img/pie.png" alt=""> Other</a>
+                    </li> -->
+                </ul>
+            </div>

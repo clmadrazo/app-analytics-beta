@@ -1,0 +1,40 @@
+<section>
+    <div id="register-container" class="nblog">
+        <div id="register-content-block">
+            <div id="register-internal-title">
+                <h2>{{=Polyglo.t('general.update_blog')}}</h2>
+            </div>
+            <div style="text-align:center;">
+                <br>
+                <div id="formUserTemplate">
+                    <form class="blogs-update" role="form" style="margin-top:-20px;">
+                        <div class="form-group">
+                            <label class="col-sm-12 control-label">{{=Polyglo.t('general.select_blog')}}</label>
+                            <div class="col-sm-12">
+                                <select class="select-blogs form-control">
+                                </select>
+                            </div>
+                        </div>
+                        <br><br>
+                        <div class="form-group">
+                            <label class="col-sm-12 control-label">{{=Polyglo.t('general.new_blog')}}</label>
+                            <div class="col-sm-12">
+                                <input class="form-control new-name" type="text" placeholder="{{=Polyglo.t('general.nblog')}}" required>
+                                <input class="hidden" type="text" value="">
+                            </div>
+                        </div>
+                        <br><br>
+                        <div class="error"></div>
+                    </form>
+                </div>
+                <div class="error" id="errcontainerblog" style="margin: -15px -14px 10px 0px;"></div>
+                <button class="login-button" id="buttonUserInvite" style="width: 90%;" type="button">{{=Polyglo.t('general.update_blog')}}</button>
+            </div>
+            <br>
+            <div style="clear: both"></div>
+        </div>
+        <div style="clear: both"></div>
+    </div>
+</section><!--==main end=-->
+
+<div class="clearfix"></div>
